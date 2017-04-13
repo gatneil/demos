@@ -5,7 +5,7 @@ A repo for demos.
 
 # Chef + large scale set demo
 
-This demo shows Chef running on a large scale set. The steps are below:
+This demo shows a large scale set configured via a Chef Automate server running in Azure. The steps are below:
 
 ## Create your Chef Automate server
 
