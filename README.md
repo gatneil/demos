@@ -36,3 +36,6 @@ Click "Login to Chef Automate" to get to the login screen for Chef Automate:
 Login with the username and password you specified previously. If you see the screen below (or a similar one), you have successfully logged in:
 
 ![successful_login](https://raw.githubusercontent.com/gatneil/demos/chef/img/successful_login.PNG)
+
+## Create and configure your scale set
+
