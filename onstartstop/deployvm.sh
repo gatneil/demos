@@ -20,12 +20,12 @@ az vm disk attach --resource-group ${RGNAME} --vm-name ${VMNAME} --disk ${DISKNA
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.sh\"], \"commandToExecute\": \"bash install.sh ${URLBASE}\"}"
 
 # wait a bit
-#sleep 30
+sleep 30
 
 # delete the VM
-#az vm delete --resource-group ${RGNAME} --name ${VMNAME} --yes
+az vm delete --resource-group ${RGNAME} --name ${VMNAME} --yes
 
 # create a new VM and attach the data disk from the previous VM to see the results
-#PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" | grep publicIpAddress | cut -d '"' -f 4)
-#az vm disk attach --resource-group ${RGNAME} --vm-name ${VM2NAME} --disk ${DISKNAME}
-#cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP}
+PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" | grep publicIpAddress | cut -d '"' -f 4)
+az vm disk attach --resource-group ${RGNAME} --vm-name ${VM2NAME} --disk ${DISKNAME}
+cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP}
