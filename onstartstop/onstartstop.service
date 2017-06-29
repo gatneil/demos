@@ -5,7 +5,7 @@ Description="Run my app code on start/stop"
 ExecStart=/bin/bash /data/onstart.sh
 ExecStop=/bin/bash /data/onstop.sh
 KillMode=none
-TimeoutStopSec=300
+TimeoutStopSec=1200
 
 [Install]
 WantedBy=multi-user.target
