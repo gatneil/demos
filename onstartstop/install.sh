@@ -1,3 +1,5 @@
+URLBASE="https://raw.githubusercontent.com/gatneil/demos/onstartstop/onstartstop"
+
 # partition, format, and mount the data disk; don't bother with fstab for this demo
 echo "n
 p
@@ -12,3 +14,9 @@ mount -t ext4 /dev/sdc1 /data
 touch /data/onstartoutput.txt
 touch /data/onstopoutput.txt
 
+curl ${URLBASE}/onstart.sh > /data/onstart.sh
+curl ${URLBASE}/onstop.sh > /data/onstop.sh
+
+# temporary test
+bash onstart.sh
+bash onstop.sh
