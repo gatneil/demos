@@ -2,7 +2,7 @@ set -evx
 
 URLBASE=$1
 
-# partition, format, and mount the data disk; don't bother with fstab for this demo
+# partition, format, and mount the data disk
 echo "n
 p
 1
@@ -13,6 +13,9 @@ w"| fdisk /dev/sdc
 mkfs -t ext4 /dev/sdc1
 mkdir /data
 mount -t ext4 /dev/sdc1 /data
+
+# add to fstab as well so the disk gets attached on reboot
+echo "/dev/sdc1       /data   ext4    defaults        0       2" >> /etc/fstab
 
 touch /data/onstartoutput.txt
 touch /data/onstopoutput.txt
