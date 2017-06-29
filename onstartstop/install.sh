@@ -1,4 +1,4 @@
-URLBASE="https://raw.githubusercontent.com/gatneil/demos/onstartstop/onstartstop"
+URLBASE=$1
 
 # partition, format, and mount the data disk; don't bother with fstab for this demo
 echo "n
