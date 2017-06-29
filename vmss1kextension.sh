@@ -28,6 +28,6 @@ pip=`az network public-ip show --resource-group $rgname --name "$vmname"PublicIP
 echo $pip
 
 
-az vmss create --resource-group $rgname --name $vmssname --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username azureuser --ssh-key-value $pubkeypath --upgrade-policy-mode Automatic --instance-count 1000 --subnet-address-prefix '10.0.0.0/21' --app-gateway-subnet-address-prefix '10.0.255.0/24' --debug
+az vmss create --resource-group $rgname --name $vmssname --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username azureuser --ssh-key-value $pubkeypath --upgrade-policy-mode Automatic --instance-count 10 --subnet-address-prefix '10.0.0.0/21' --app-gateway myappgw --app-gateway-subnet-address-prefix '10.0.255.0/24' --debug
 
 az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vmss-name $vmssname --settings "{\"fileUris\": [\"${uriBase}checkin.sh\"], \"commandToExecute\": \"bash checkin.sh ${pip}\"}"
