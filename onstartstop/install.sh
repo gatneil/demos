@@ -25,6 +25,4 @@ chmod 755 /etc/systemd/system/onstartstop.service
 chmod 755 /data/onstart.sh
 chmod 755 /data/onstop.sh
 
-#systemctl enable onstartstop --now
-systemctl enable onstartstop
-reboot
+systemctl enable onstartstop --now
