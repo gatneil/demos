@@ -10,7 +10,7 @@ DISKSIZEGB=10
 LOCATION=westus
 PUBKEYPATH="/home/negat/.ssh/id_rsa.pub"
 USERNAME=negat
-URLBASE="https://raw.githubusercontent.com/gatneil/demos/onstartstop/onstartstop-linux"
+URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/onstartstop-linux"
 
 
 # create VM with onstart and onstop code that write to a data disk
