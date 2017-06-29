@@ -9,6 +9,7 @@ p
 w"| fdisk /dev/sdc
 
 mkfs -t ext4 /dev/sdc1
+mkdir /data
 mount -t ext4 /dev/sdc1 /data
 
 touch /data/onstartoutput.txt
@@ -18,5 +19,5 @@ curl ${URLBASE}/onstart.sh > /data/onstart.sh
 curl ${URLBASE}/onstop.sh > /data/onstop.sh
 
 # temporary test
-bash onstart.sh
-bash onstop.sh
+bash /data/onstart.sh
+bash /data/onstop.sh
