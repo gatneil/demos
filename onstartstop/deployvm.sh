@@ -23,7 +23,7 @@ az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScrip
 sleep 30
 
 # delete the VM
-az vm delete --resource-group ${RGNAME} --vm-name ${VMNAME}
+az vm delete --resource-group ${RGNAME} --name ${VMNAME}
 
 # create a new VM and attach the data disk from the previous VM to see the results
 PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" | grep publicIpAddress | cut -d '"' -f 4)
