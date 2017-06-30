@@ -4,7 +4,9 @@ set -evx
 
 RGNAME=appdr$RANDOM
 VMNAME=${RGNAME}
+VNETNAME=vnet1
 VM2NAME=${VMNAME}2
+VNET2NAME=vnet2
 DISKNAME=${RGNAME}
 DISKSIZEGB=10
 LOCATION=westus
@@ -13,10 +15,14 @@ USERNAME=negat
 URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/appdraining-linux-outbound"
 
 
-# create VM with onstart and onstop code that write to a data disk
+# create VM with a webserver that logs incoming requests
 az group create -l ${LOCATION} -n ${RGNAME}
-az vm create --resource-group ${RGNAME} --name ${VMNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg ""
+PIP=$(az vm create --resource-group ${RGNAME} --name ${VMNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNETNAME} | grep publicIpAddress | cut -d '"' -f 4)
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/installwebserver.sh\"], \"commandToExecute\": \"bash installwebserver.sh ${URLBASE}\"}"
+
+# create a VM to be deleted that will make outbound connections to the other VM
+az vm create --resource-group ${RGNAME} --name ${VMNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
+az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/installonstartstop.sh\"], \"commandToExecute\": \"bash installonstartstop.sh ${PIP}:5000\"}"
 
 # wait a bit
 #sleep 30
