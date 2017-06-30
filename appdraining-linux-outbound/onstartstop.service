@@ -2,8 +2,8 @@
 Description="Run my app code on start/stop"
 
 [Service]
-ExecStart=/bin/bash /data/onstart.sh
-ExecStop=/bin/bash /data/onstop.sh
+ExecStart=/bin/bash /onstart.sh
+ExecStop=/bin/bash /onstop.sh
 KillMode=none
 TimeoutStopSec=300
 
