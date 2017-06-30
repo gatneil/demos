@@ -10,7 +10,7 @@ DISKSIZEGB=10
 LOCATION=westus
 PUBKEYPATH="/home/negat/.ssh/id_rsa.pub"
 USERNAME=negat
-URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/appdraining-linux"
+URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/appdraining-linux-outbound"
 
 
 # create VM with onstart and onstop code that write to a data disk
