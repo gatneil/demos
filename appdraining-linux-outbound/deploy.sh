@@ -21,8 +21,8 @@ PIP=$(az vm create --resource-group ${RGNAME} --name ${VMNAME} --image Canonical
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/installwebserver.sh\"], \"commandToExecute\": \"bash installwebserver.sh ${URLBASE}\"}"
 
 # create a VM to be deleted that will make outbound connections to the other VM
-az vm create --resource-group ${RGNAME} --name ${VMNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
-az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/installonstartstop.sh\"], \"commandToExecute\": \"bash installonstartstop.sh ${PIP}:5000\"}"
+az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
+az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/installonstartstop.sh\"], \"commandToExecute\": \"bash installonstartstop.sh ${PIP}:5000\"}"
 
 # wait a bit
 #sleep 30
