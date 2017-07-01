@@ -25,7 +25,7 @@ az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScrip
 
 # create a VM to be deleted that will make connections to the other VM (these are inbound from the perspective of the VM getting deleted)
 az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
-az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [], \"commandToExecute\": \"while [ 1 == 1 ]; do curl ${PIP}:5000 && sleep 5; done\"}"
+az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/curlserver.sh\"], \"commandToExecute\": \"bash curlserver.sh ${PIP}:5000\"}"
 
 # wait a bit
 sleep 30
