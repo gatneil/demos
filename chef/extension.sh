@@ -18,7 +18,7 @@ mkdir -p .ssh
 
 printf '%b' ${validator_pem_value} > .chef/${validator_pem_file_name}
 printf '%b' ${knife_rb} > .chef/knife.rb
-printf '%b' ${trusted_cert_value} > .chef/${trusted_cert_file_name}
+printf '%b' ${trusted_cert_value} > .chef/trusted_certs/${trusted_cert_file_name}
 printf '%b' ${vm_private_key} > .ssh/id_rsa
 
 # blindly trusting install script downloaded from the internet is bad security practice;
