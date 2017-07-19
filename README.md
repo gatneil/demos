@@ -1,11 +1,17 @@
-DEMOS
-=====
+Get started with Chef on Azure
+==============================
 
-A repo for demos.
+# Overview
 
-# Chef + large scale set demo
+This article shows how to get started with Chef on Azure. At a high level, this has the following steps:
 
-This demo shows a large scale set configured via a Chef Automate server running in Azure. The steps are below:
+* Create your Chef server. We will deploy this server using the [Azure Portal](portal.azure.com).
+
+* Create your Chef workstation. We will use the Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef workstation. We will then run a script via ssh to configure this workstation and make some modifications to the Chef server.
+
+* Create your Chef client. We will use Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef client. We will then show two different options to configure this client to use the Chef Server. In the first method we will make a `knife bootstrap` call from the Chef workstation to configure the client. This method should be familiar to Chef users even if you are not used to Azure. In the second method we will use an Azure Virtual Machine Extension to configure the client. This second method utilizes Azure's notion of a VM model and sets us up nicely for our next step:
+
+* Create a cluster of Chef clients. We will use Azure CLI 2.0 to deploy an Ubuntu-based virtual machine scale set and use an extension to configure all of these VMs as Chef clients. Using a scale set with an extension allows us to deploy and manage a cluster of similarly-configured VMs at scale.
 
 ## Create your Chef Automate server from the Azure Portal
 
