@@ -14,6 +14,7 @@ homedir=/home/${vm_username}
 
 cd ${homedir}
 mkdir -p .chef
+mkdir -p .chef/trusted_certs
 mkdir -p .ssh
 
 printf '%b' ${validator_pem_value} > .chef/${validator_pem_file_name}
