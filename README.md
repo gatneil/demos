@@ -13,15 +13,13 @@ In the [Azure Portal](portal.azure.com), create a `Chef Automate` server:
 
 ![chef_automate_portal_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/chef_automate_portal.jpg).
 
-Once this completes, click on the `Deployments` link within the `Resource Group` view to see the list of deployments:
+Once you finish the create wizard and the deployment completes, click on the `Deployments` link within the `Resource Group` view to see the list of deployments:
 
 ![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/deployments.jpg)
 
 Then click on the top deployment and find the `FQDN` output:
 
 ![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/ChefAutomateUrl.jpg)
-
-(*** TODO THIS SHOULD ACTUALLY BE THE BISCOTTI URL ***)
 
 Navigate to this URL in your browser and fill out the form, leaving the RSA key pair blank, un-checking the option to create a support account, and checking the EULA checkbox:
 
