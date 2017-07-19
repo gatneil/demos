@@ -15,11 +15,11 @@ In the [Azure Portal](portal.azure.com), create a `Chef Automate` server:
 
 Once this completes, click on the `Deployments` link within the `Resource Group` view to see the list of deployments:
 
-![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/chef_deployment.jpg)
+![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/deployments.jpg)
 
 Then click on the top deployment and find the `FQDN` output:
 
-![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/chef_fqdn.jpg)
+![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/ChefAutomateUrl.jpg)
 
 (*** TODO THIS SHOULD ACTUALLY BE THE BISCOTTI URL ***)
 
