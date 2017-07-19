@@ -17,10 +17,10 @@ mkdir -p .chef
 mkdir -p .chef/trusted_certs
 mkdir -p .ssh
 
-printf '%b' ${validator_pem_value} > .chef/${validator_pem_file_name}
+echo ${validator_pem_value} | tr '|' '\n' > .chef/${validator_pem_file_name}
 printf '%b' ${knife_rb} > .chef/knife.rb
-printf '%b' ${trusted_cert_value} > .chef/trusted_certs/${trusted_cert_file_name}
-printf '%b' ${vm_private_key} > .ssh/id_rsa
+echo ${trusted_cert_value} | tr '|' '\n' > .chef/trusted_certs/${trusted_cert_file_name}
+echo ${vm_private_key} | tr '|' '\n' > .ssh/id_rsa
 
 # blindly trusting install script downloaded from the internet is bad security practice;
 # for production environments, we should have our own copy of this file or should
