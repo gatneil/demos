@@ -7,8 +7,8 @@ validator_pem_file_name=$2
 validator_pem_value=$3
 knife_rb=$4
 trusted_cert_file_name=$5
-trusted_cert_value=$5
-vm_private_key=$6
+trusted_cert_value=$6
+vm_private_key=$7
 
 homedir=/home/${vm_username}
 
@@ -18,7 +18,7 @@ mkdir -p .chef/trusted_certs
 mkdir -p .ssh
 
 echo ${validator_pem_value} | tr '|' '\n' > .chef/${validator_pem_file_name}
-printf '%b' ${knife_rb} > .chef/knife.rb
+echo ${knife_rb} | tr '|' '\n' | tr '%' '"' > .chef/knife.rb
 echo ${trusted_cert_value} | tr '|' '\n' > .chef/trusted_certs/${trusted_cert_file_name}
 echo ${vm_private_key} | tr '|' '\n' > .ssh/id_rsa
 
