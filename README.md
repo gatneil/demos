@@ -21,6 +21,8 @@ Then click on the top deployment and find the `FQDN` output:
 
 ![chef_automate_deployments_img](https://raw.githubusercontent.com/gatneil/demos/chef/img/chef_fqdn.jpg)
 
+(*** TODO THIS SHOULD ACTUALLY BE THE BISCOTTI URL ***)
+
 Navigate to this URL in your browser and fill out the form, leaving the RSA key pair blank, un-checking the option to create a support account, and checking the EULA checkbox:
 
 ![biscotti](https://raw.githubusercontent.com/gatneil/demos/chef/img/biscotti.PNG)
