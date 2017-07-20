@@ -5,7 +5,7 @@ Get started with Chef on Azure
 
 This article shows how to get started with Chef on Azure. At a high level, this has the following steps:
 
-* [Create our Chef server](#Create-our-Chef-server). We will deploy this server using the [Azure Portal](portal.azure.com).
+* Create our Chef server. We will deploy this server using the [Azure Portal](portal.azure.com).
 
 * Create our Chef workstation. We will use the Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef workstation. We will then run a script via ssh to configure this workstation and make some modifications to the Chef server.
 
