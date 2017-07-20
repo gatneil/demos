@@ -62,10 +62,10 @@ localmachine:~$ az group create --name chefworkstation --location westus
   "tags": null
 }
 
-localmachine:~$ az vm create --resource-group chefworkstation --name chefworkstation --image UbuntuLTS --admin-username OUR_USERNAME_HERE --authentication-type password --admin-password OUR_PASSWORD_HERE
+localmachine:~$ az vm create --resource-group chefworkstation --name chefworkstation --image UbuntuLTS --admin-username OUR_USERNAME_HERE
 {
   "fqdns": "",
-  "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chef/providers/Microsoft.Compute/virtualMachines/test",
+  "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chef/providers/Microsoft.Compute/virtualMachines/chefworkstation",
   "location": "westus",
   "macAddress": "00-0D-3A-36-FC-3D",
   "powerState": "VM running",
@@ -75,22 +75,24 @@ localmachine:~$ az vm create --resource-group chefworkstation --name chefworksta
 }
 ```
 
+Note that the `az vm create` command above adds `~/.ssh/id_rsa.pub` from the local machine to the `authorized_keys` for the workstation. Thus, we will be able to ssh into the workstation using the default `~/.ssh/id_rsa` private key.
+
 Next we scp the starter kit we downloaded from the Chef server up to the workstation then ssh into the workstation:
-```
+```bash
 localmachine:~$ scp starter_kit.zip OUR_USERNAME@YOUR_WORKSTATION_PUBLIC_IP_ADDRESS:~/
 localmachine:~$ ssh YOUR_USERNAME@OUR_WORKSTATION_PUBLIC_IP_ADDRESS
 ```
 
 We then unzip the starter kit:
 
-```
+```bash
 chefworkstation:~$ sudo apt update --yes && sudo apt install unzip --yes
 chefworkstation:~$ unzip starter_kit.zip
 ```
 
 We should now see a directory called `chef-repo`. We will use this as our working directory for running `knife` commands:
 
-```
+```bash
 chefworkstation:~$ ls
 chef-repo
 chefworkstation:~$ cd chef-repo/
@@ -98,14 +100,14 @@ chefworkstation:~$ cd chef-repo/
 
 Note: if we do an `ls` in the chef-repo directory, we won't see any files. This is because the configuration lives within the `.chef` hidden directory; to see this directory and its contents, run `ls -a`. Next we download the Chef omnitrick installer and run it to install the ChefDK. For simplicity of this article, we don't validate the integrity of the install script, but for production environments we should verify the install script for security reasons.
 
-```
+```bash
 chefworkstation:~/chef-repo$ curl -LO https://omnitruck.chef.io/install.sh
 chefworkstation:~/chef-repo$ sudo bash ./install.sh
 ```
 
 Once this is complete, we should be able to run `knife` commands from the `chef-repo` directory. To verify that our workstation is able to communicate with our Chef server, we run `knife ssl fetch`. If we see output similar to below, we have successfully configured our workstation.
 
-```
+```bash
 chefworkstation:~/chef-repo$ knife ssl fetch
 WARNING: Certificates from *** will be fetched and placed in your trusted_cert
 directory (***).
@@ -116,5 +118,101 @@ verify the authenticity of these certificates after downloading.
 Adding certificate for *** in ***
 ```
 
+While we are here, we should also create a `.ssh` directory in case it doesn't already exist. This will be useful later on when we add a private key to this directory that will give this workstation access to the Chef client machine:
+
+```bash
+chefworkstation:~/chef-repo$ mkdir -p ~/.ssh
+```
+
 
 ## Create our Chef client and configure using ssh
+
+Back on our local machine, we create a resource group and a VM for our chef client. Here are example commands and output for doing so:
+
+```bash
+localmachine:~$ az group create --name chefclient --location westus
+{
+  "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chefclient",
+  "location": "westus",
+  "managedBy": null,
+  "name": "chefclient",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null
+}
+
+localmachine:~$ az vm create --resource-group chefclient --name chefclient --image UbuntuLTS --admin-username OUR_USERNAME_HERE
+{
+  "fqdns": "",
+  "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chefclient/providers/Microsoft.Compute/virtualMachines/chefclient",
+  "location": "westus",
+  "macAddress": "00-0D-3A-36-FC-3D",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.5",
+  "publicIpAddress": "OUR_CLIENT_PUBLIC_IP_ADDRESS",
+  "resourceGroup": "chefclient"
+}
+```
+
+As described earlier, the `az vm create` command above adds `~/.ssh/id_rsa.pub` from the local machine to the `authorized_keys` for the Chef client machine. We will need to give the workstation the ability to ssh to this client machine, so we scp the `~/.ssh/id_rsa` private key from the local machine to `~/.ssh/id_rsa` on the workstation:
+
+```
+localmachine:~$ scp  ~/.ssh/id_rsa OUR_USERNAME@OUR_WORKSTATION_PUBLIC_IP_ADDRESS:~/.ssh/
+```
+
+Then we ssh into the workstation machine and run the `knife bootstrap` command **from the ~/chef-repo directory** to bootstrap our client machine:
+
+```bash
+localmachine:~$ ssh OUR_USERNAME@OUR_WORKSTATION_PUBLIC_IP_ADDRESS
+chefworkstation:~/$ cd chef-repo
+chefworkstation:~/chef-repo$ knife bootstrap OUR_CLIENT_PUBLIC_IP_ADDRESS --sudo --ssh-user YOUR_USERNAME
+
+Doing old-style registration with the validation key at ***...
+Delete your validation key in order to use your user credentials instead
+
+Connecting to ***
+*** -----> Installing Chef Omnibus (-v 13)
+*** downloading https://omnitruck-direct.chef.io/chef/install.sh
+***   to file /tmp/install.sh.1880/install.sh
+*** trying wget...
+*** ubuntu 16.04 x86_64
+*** Getting information for chef stable 13 for ubuntu...
+*** downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=13&p=ubuntu&pv=16.04&m=x86_64
+***   to file /tmp/install.sh.1885/metadata.txt
+*** trying wget...
+*** sha1       ***
+*** sha256     ***
+*** url        https://packages.chef.io/files/stable/chef/13.2.20/ubuntu/16.04/chef_13.2.20-1_amd64.deb
+*** version    13.2.20
+*** downloaded metadata file looks valid...
+*** downloading https://packages.chef.io/files/stable/chef/13.2.20/ubuntu/16.04/chef_13.2.20-1_amd64.deb
+***   to file /tmp/install.sh.1885/chef_13.2.20-1_amd64.deb
+*** trying wget...
+*** Comparing checksum with sha256sum...
+*** Installing chef 13
+*** installing with dpkg...
+*** Selecting previously unselected package chef.
+(Reading database ... 61470 files and directories currently installed.)
+*** Preparing to unpack .../chef_13.2.20-1_amd64.deb ...
+*** Unpacking chef (13.2.20-1) ...
+*** Setting up chef (13.2.20-1) ...
+*** Thank you for installing Chef!
+*** Starting the first Chef Client run...
+*** Starting Chef Client, version 13.2.20
+*** Creating a new client identity for ***
+*** resolving cookbooks for run list: []
+*** Synchronizing Cookbooks:
+*** Installing Cookbook Gems:
+*** Compiling Cookbooks...
+*** [***] WARN: Node *** has an empty run list.
+*** Converging 0 resources
+***
+*** Running handlers:
+*** Running handlers complete
+*** Chef Client finished, 0/0 resources updated in 02 seconds
+```
+
+To verify that this client was successfully registered with the Chef server, we can navigate back to the web interface for our Chef Server, click on `Nodes`, and see our client listed like below:
+
+![successful_client](https://raw.githubusercontent.com/gatneil/demos/chef/img/see_node.jpg)
