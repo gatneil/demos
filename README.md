@@ -48,7 +48,7 @@ Login with the username and password we specified previously. If we see the scre
 First, we create a resource group and a VM for our chef workstation. Here are example commands and output for doing so:
 
 ```bash
-~$ az group create --name chefworkstation --location westus
+localmachine:~$ az group create --name chefworkstation --location westus
 {
   "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chefworkstation",
   "location": "westus",
@@ -60,7 +60,7 @@ First, we create a resource group and a VM for our chef workstation. Here are ex
   "tags": null
 }
 
-~$ az vm create --resource-group chefworkstation --name chefworkstation --image UbuntuLTS --admin-username OUR_USERNAME_HERE --authentication-type password --admin-password OUR_PASSWORD_HERE
+localmachine:~$ az vm create --resource-group chefworkstation --name chefworkstation --image UbuntuLTS --admin-username OUR_USERNAME_HERE --authentication-type password --admin-password OUR_PASSWORD_HERE
 {
   "fqdns": "",
   "id": "/subscriptions/OUR_SUBSCRIPTION_ID/resourceGroups/chef/providers/Microsoft.Compute/virtualMachines/test",
@@ -75,36 +75,36 @@ First, we create a resource group and a VM for our chef workstation. Here are ex
 
 Next we scp the starter kit we downloaded from the Chef server up to the workstation then ssh into the workstation:
 ```
-~$ scp starter_kit.zip OUR_USERNAME@YOUR_WORKSTATION_PUBLIC_IP_ADDRESS:~/
-~$ ssh YOUR_USERNAME@OUR_WORKSTATION_PUBLIC_IP_ADDRESS
+localmachine:~$ scp starter_kit.zip OUR_USERNAME@YOUR_WORKSTATION_PUBLIC_IP_ADDRESS:~/
+localmachine:~$ ssh YOUR_USERNAME@OUR_WORKSTATION_PUBLIC_IP_ADDRESS
 ```
 
 We then unzip the starter kit:
 
 ```
-~$ sudo apt update --yes && sudo apt install unzip --yes
-~$ unzip starter_kit.zip
+chefworkstation:~$ sudo apt update --yes && sudo apt install unzip --yes
+chefworkstation:~$ unzip starter_kit.zip
 ```
 
 We should now see a directory called `chef-repo`. We will use this as our working directory for running `knife` commands:
 
 ```
-~$ ls
+chefworkstation:~$ ls
 chef-repo
-~$ cd chef-repo/
+chefworkstation:~$ cd chef-repo/
 ```
 
 Note: if we do an `ls` in the chef-repo directory, we won't see any files. This is because the configuration lives within the `.chef` hidden directory; to see this directory and its contents, run `ls -a`. Next we download the Chef omnitrick installer and run it to install the ChefDK. For simplicity of this article, we don't validate the integrity of the install script, but for production environments we should verify the install script for security reasons.
 
 ```
-curl -LO https://omnitruck.chef.io/install.sh
-sudo bash ./install.sh
+chefworkstation:~/chef-repo$ curl -LO https://omnitruck.chef.io/install.sh
+chefworkstation:~/chef-repo$ sudo bash ./install.sh
 ```
 
 Once this is complete, we should be able to run `knife` commands from the `chef-repo` directory. To verify that our workstation is able to communicate with our Chef server, we run `knife ssl fetch`. If we see output similar to below, we have successfully configured our workstation.
 
 ```
-~$ knife ssl fetch
+chefworkstation:~/chef-repo$ knife ssl fetch
 WARNING: Certificates from *** will be fetched and placed in your trusted_cert
 directory (***).
 
