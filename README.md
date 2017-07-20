@@ -9,7 +9,7 @@ This article shows how to get started with Chef on Azure. At a high level, this 
 
 * Create our Chef workstation. We will use the Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef workstation. We will then run a script via ssh to configure this workstation and make some modifications to the Chef server.
 
-* Create our Chef client and configure using ssh. We will use Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef clien, then make a `knife bootstrap` call from the Chef workstation to configure the client. This method of configuring the Chef client should be familiar to Chef users, even those not used to Azure.
+* Create our Chef client and configure using ssh. We will use Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef client, then make a `knife bootstrap` call from the Chef workstation to configure the client. This method of configuring the Chef client should be familiar to Chef users, even those not used to Azure.
 
 * Create our Chef client and configure using an Azure Virtual Machine Extension. This method of configuring the Chef client utilizes Azure's notion of a VM model and sets us up nicely for our next step:
 
