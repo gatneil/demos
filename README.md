@@ -5,15 +5,17 @@ Get started with Chef on Azure
 
 This article shows how to get started with Chef on Azure. At a high level, this has the following steps:
 
-* Create our Chef server. We will deploy this server using the [Azure Portal](portal.azure.com).
+* [Create our Chef server](#Create-our-Chef-server). We will deploy this server using the [Azure Portal](portal.azure.com).
 
 * Create our Chef workstation. We will use the Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef workstation. We will then run a script via ssh to configure this workstation and make some modifications to the Chef server.
 
-* Create our Chef client. We will use Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef client. We will then show two different options to configure this client to use the Chef Server. In the first method we will make a `knife bootstrap` call from the Chef workstation to configure the client. This method should be familiar to Chef users, even those not used to Azure. In the second method we will use an Azure Virtual Machine Extension to configure the client. This second method utilizes Azure's notion of a VM model and sets us up nicely for our next step:
+* Create our Chef client and configure using ssh. We will use Azure CLI 2.0 to deploy an Ubuntu virtual machine as our Chef clien, then make a `knife bootstrap` call from the Chef workstation to configure the client. This method of configuring the Chef client should be familiar to Chef users, even those not used to Azure.
+
+* Create our Chef client and configure using an Azure Virtual Machine Extension. This method of configuring the Chef client utilizes Azure's notion of a VM model and sets us up nicely for our next step:
 
 * Create a cluster of Chef clients. We will use Azure CLI 2.0 to deploy an Ubuntu-based virtual machine scale set and use an extension to configure all of these VMs as Chef clients. Using a scale set with an extension allows us to deploy and manage a cluster of similarly-configured VMs at scale.
 
-## Create our Chef Automate server from the Azure Portal
+## Create our Chef server
 
 In the [Azure Portal](portal.azure.com), create a `Chef Automate` server:
 
@@ -115,3 +117,4 @@ Adding certificate for *** in ***
 ```
 
 
+## Create our Chef client and configure using ssh
