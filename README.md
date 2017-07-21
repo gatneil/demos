@@ -216,3 +216,78 @@ Connecting to ***
 To verify that this client was successfully registered with the Chef server, we can navigate back to the web interface for our Chef Server, click on `Nodes`, and see our client listed like below:
 
 ![successful_client](https://raw.githubusercontent.com/gatneil/demos/chef/img/see_node.jpg)
+
+
+
+
+## Create our Chef client and configure using an Azure Virtual Machine Extension
+
+This method of creating and configuring a Chef client is similar to the previous method, except we will have the client node bootstrap itself. In order to do this, we will utilize the [Azure Custom Script for Linux extension](https://docs.microsoft.com/azure/virtual-machines/linux/extensions-customscript). This allows us to specify a script in the VM model, which will cause the script to run in the VM. The script we will run is in github [here](https://raw.githubusercontent.com/gatneil/demos/chef/chef/extension.sh). Taking a look at the script, we can see that we first read the contents of some configuration files from the command line arguments to the script (we will pass these values in when we add the extension to the VM). **Note that we do not need to run these commands. This is simply a script we will invoke with commands later on**.
+
+```bash
+#!/bin/bash
+
+set -evx
+
+vm_username=$1
+validator_pem_file_name=$2
+validator_pem_value=$3
+knife_rb=$4
+trusted_cert_file_name=$5
+trusted_cert_value=$6
+vm_private_key=$7
+
+```
+
+We create the expected file structure for the .ssh and .chef directories:
+
+```bash
+homedir=/home/${vm_username}
+
+cd ${homedir}
+mkdir -p .chef
+mkdir -p .chef/trusted_certs
+mkdir -p .ssh
+
+```
+
+We then take the configuration file contents and store them in the proper files. As we will see later on in this article, the file contents are passed in to this script with '|' instead of newlines and '%' instead of double-quotes, so we undo these modifications before writing the contents to file.
+
+```bash
+echo ${validator_pem_value} | tr '|' '\n' > .chef/${validator_pem_file_name}
+echo ${knife_rb} | tr '|' '\n' | tr '%' '"' > .chef/knife.rb
+echo ${trusted_cert_value} | tr '|' '\n' > .chef/trusted_certs/${trusted_cert_file_name}
+echo ${vm_private_key} | tr '|' '\n' > .ssh/id_rsa
+```
+
+Finally, we install the ChefDK on this machine and have it bootstrap itself:
+
+```bash
+curl -LO https://omnitruck.chef.io/install.sh
+bash ./install.sh
+knife bootstrap localhost --sudo --ssh-user ${vm_username}
+```
+
+**In order to invoke this script, we will run the following commands from the ~/chef-repo directory our local machine.** We had not previously unzipped this directory on our local machine (we did that on our workstation), so we might need to unzip the starter_kit on the local machine first then `cd` into the unzipped chef-repo directory before running the following commands.
+
+First, we get the configuration files into a single-line format, replacing newlines with '|' and double-quotes with '%'. This will alow us to easily specify the extension settings:
+
+```bash
+validator_pem=$(sed 's/$/|/' .chef/contoso-validator.pem | tr -d '\n' | head -c -1)
+trusted_cert=$(sed 's/$/|/' .chef/trusted_certs/nsgchefserver.westus.cloudapp.azure.com.crt | tr -d '\n' | head -c -1)
+vm_private_key=$(sed 's/$/|/' ../chef | tr -d '\n' | head -c -1)
+knife_rb=$(sed 's/"/%/g' .chef/knife.rb | sed 's/$/|/' | tr -d '\n' | head -c -1)
+```
+
+Next, we create a resource group and virtual machine to act as our chef client node:
+```bash
+az group create -n chefclient2 -l westus
+az vm create -g chefclient2 -n chefclient2 --image UbuntuLTS --admin-username OUR_USERNAME
+```
+
+We then add the extension, specifying the script described earlier in the `fileUris`. We then invoke this script with the command in `commandToExecute`, passing in the contents of the configuration files from above:
+
+```bash
+az vm extension set --publisher Microsoft.Azure.Extensions --name CustomScript --version 2.0 --resource-group chefclient2 --vm-name chefclient2 --settings "{\"fileUris\": [\"https://raw.githubusercontent.com/gatneil/demos/chef/chef/extension.sh\"]}" --protected-settings "{\"commandToExecute\": \"bash extension.sh chef contoso-validator.pem '${validator_pem}' '${knife_rb}' nsgchefserver.westus.cloudapp.azure.com.crt '${trusted_cert}' '${vm_private_key}'\"}"
+```
+
