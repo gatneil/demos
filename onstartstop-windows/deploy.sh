@@ -17,7 +17,7 @@ URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/onstartstop-wind
 az group create -l ${LOCATION} -n ${RGNAME}
 az vm create --resource-group ${RGNAME} --name ${VMNAME} --image MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest --authentication-type password --admin-username ${USERNAME} --admin-password $PASSWORD --nsg "" --size Standard_DS2_v2 --storage-sku Premium_LRS
 az vm disk attach --resource-group ${RGNAME} --vm-name ${VMNAME} --disk ${DISKNAME} --size-gb ${DISKSIZEGB} --new
-#az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.sh\"], \"commandToExecute\": \"bash install.sh ${URLBASE}\"}"
+az vm extension set --publisher "Microsoft.Compute" --name "CustomScriptExtension" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.ps1\"], \"commandToExecute\": \"powershell -ExecutionPolicy Unrestricted -File install.ps1\"}"
 
 exit 0
 
