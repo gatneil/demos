@@ -17,7 +17,7 @@ USERNAME=negat
 URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/appdraining-lb"
 
 
-# create VM to be deleted; install onstart and onstop code;
+# create VM to be deleted; install onstart and onstop code; also put behind LB
 # the onstop code will make sure we get the delay on delete;
 # also install a web server that logs incoming requests to a data disk
 az group create -l ${LOCATION} -n ${RGNAME}
@@ -26,7 +26,7 @@ PIP=$(az network public-ip show -g ${RGNAME} -n ${RGNAME} | grep ipAddress | cut
 az vm disk attach --resource-group ${RGNAME} --vm-name ${VMNAME} --disk ${DISKNAME} --size-gb ${DISKSIZEGB} --new
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.sh\"], \"commandToExecute\": \"bash install.sh ${URLBASE}\"}"
 
-# create a VM to make connections to the other VM;
+# create a VM to make connections to the other VM through the LB;
 # these requests are inbound from the perspective of the VM getting deleted
 az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/curlserver.sh\"], \"commandToExecute\": \"bash curlserver.sh ${PIP}:5000 &\"}"
