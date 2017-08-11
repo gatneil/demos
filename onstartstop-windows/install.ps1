@@ -9,7 +9,9 @@ curl -UseBasicParsing https://raw.githubusercontent.com/gatneil/demos/master/ons
 "gPCMachineExtensionNames=[{42B5FAAE-6536-11D2-AE5A-0000F87571E3}{40B6664F-4972-11D1-A7CA-0000F87571E3}]" >> C:\Windows\System32\GroupPolicy\gpt.ini
 "Version=8" >> C:\Windows\System32\GroupPolicy\gpt.ini
 
-mkdir C:\Windows\System32\GroupPolicy\Machine\Scripts
+mkdir C:\Windows\System32\GroupPolicy\Machine\Scripts\Shutdown
+mkdir C:\Windows\System32\GroupPolicy\Machine\Scripts\Startup
+mkdir C:\Windows\System32\GroupPolicy\User
 
 "[Shutdown]" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
 "0CmdLine=C:\onstop.ps1" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
@@ -17,5 +19,7 @@ mkdir C:\Windows\System32\GroupPolicy\Machine\Scripts
 "[Startup]" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
 "0CmdLine=C:\onstart.ps1" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
 "0Parameters=" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
+
+"" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\scripts.ini
 
 gpupdate
