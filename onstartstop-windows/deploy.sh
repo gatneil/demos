@@ -25,7 +25,8 @@ sleep 30
 # delete the VM
 az vm delete --resource-group ${RGNAME} --name ${VMNAME} --yes
 
-# create a new VM and attach the data disk from the previous VM to see the results
+# create a new VM and attach the data disk from the previous VM;
+# RDP into the VM and look in F:\onstop.txt to see the results
 PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest --authentication-type password --admin-username ${USERNAME} --admin-password $PASSWORD --nsg "" --size Standard_DS2_v2 --storage-sku Premium_LRS | grep publicIpAddress | cut -d '"' -f 4)
 az vm disk attach --resource-group ${RGNAME} --vm-name ${VM2NAME} --disk ${DISKNAME}
-#cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP}
+
