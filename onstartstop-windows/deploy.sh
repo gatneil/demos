@@ -19,8 +19,6 @@ az vm create --resource-group ${RGNAME} --name ${VMNAME} --image MicrosoftWindow
 az vm disk attach --resource-group ${RGNAME} --vm-name ${VMNAME} --disk ${DISKNAME} --size-gb ${DISKSIZEGB} --new
 az vm extension set --publisher "Microsoft.Compute" --name "CustomScriptExtension" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.ps1\"], \"commandToExecute\": \"powershell -ExecutionPolicy Unrestricted -File install.ps1\"}"
 
-exit 0
-
 # wait a bit
 sleep 30
 
