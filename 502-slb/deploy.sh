@@ -14,7 +14,7 @@ LOCATION=westus
 PUBKEYPATH="/home/negat/.ssh/id_rsa.pub"
 PASSWORD=${RGNAME}aA!!!!!!!!
 USERNAME=negat
-URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/appdraining-lb"
+URLBASE="https://raw.githubusercontent.com/gatneil/demos/master/502-slb"
 
 
 # create VM to be deleted; install onstart and onstop code; also put behind LB
