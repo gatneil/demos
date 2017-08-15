@@ -28,7 +28,7 @@ az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScrip
 
 # create a VM to make connections to the other VM through the LB;
 # these requests are inbound from the perspective of the VM getting deleted
-az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME}
+PIP2=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --vnet-name ${VNET2NAME} | grep publicIpAddress | cut -d '"' -f 4)
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/curlserver.sh\"], \"commandToExecute\": \"bash curlserver.sh ${PIP}:5000 &\"}"
 
 # wait a bit
@@ -41,3 +41,7 @@ az vm delete --resource-group ${RGNAME} --name ${VMNAME} --yes
 PIP3=$(az vm create --resource-group ${RGNAME} --name ${VM3NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" | grep publicIpAddress | cut -d '"' -f 4)
 az vm disk attach --resource-group ${RGNAME} --vm-name ${VM3NAME} --disk ${DISKNAME}
 cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP3}
+
+# check output of curlserver VM to see if got a 502
+cat checkcurl.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP2}
+
