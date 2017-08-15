@@ -5,7 +5,7 @@ sudo -i
 echo "CURL SERVER STDOUT"
 echo "=================="
 
-cat /var/lib/waagent/custom-script/downloads/0/stdout
+cat /var/lib/waagent/custom-script/download/0/stdout
 
 echo ""
 echo ""
@@ -13,4 +13,8 @@ echo ""
 echo "CURL SERVER STDERR"
 echo "=================="
 
-cat /var/lib/waagent/custom-script/downloads/0/stderr
+cat /var/lib/waagent/custom-script/download/0/stderr
+
+echo "CURL SERVER *"
+echo "============="
+cat /var/lib/waagent/custom-script/download/0/*
