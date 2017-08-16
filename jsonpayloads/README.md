@@ -1,6 +1,7 @@
 CREATE AN AVAILABILITY SET
 ==========================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/availabilitySets/myAvailabilitySet?api-version=2017-03-30
 
 {
@@ -10,12 +11,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     "platformUpdateDomainCount": 20
   }
 }
+```
 
 
 
 CREATE A VM WITH PASSWORD AUTHENTICATION
 ========================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -58,12 +61,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM WITH SSH AUTHENTICATION
 ===================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -116,12 +121,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM WITH PREMIUM STORAGE
 ================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -164,12 +171,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM IN AN AVAILABILITY SET
 ==================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -215,12 +224,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM WITH BOOT DIAGNOSTICS
 =================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -269,12 +280,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM WITH EMPTY DATA DISKS
 =================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -329,12 +342,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM WITH A MARKETPLACE IMAGE PLAN
 =========================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -382,12 +397,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A VM FROM A CUSTOM IMAGE
 ===============================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -427,12 +444,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A PLATFORM-IMAGE VM WITH UNMANAGED OS AND DATA DISKS
 ===========================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -493,12 +512,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A CUSTOM-IMAGE VM FROM AN UNMANAGED GENERALIZED OS IMAGE
 ===============================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVM?api-version=2017-03-30
 
 {
@@ -539,12 +560,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
   "name": "myVM", 
   "location": "westus"
 }
+```
 
 
 
 CREATE A SCALE SET WITH PASSWORD AUTHENTICATION
 ===============================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -603,12 +626,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH SSH AUTHENTICATION
 ==========================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -677,12 +702,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH PREMIUM STORAGE
 =======================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -741,12 +768,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH EMPTY DATA DISKS ON EACH VM
 ===================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -817,12 +846,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH AN AZURE LOAD BALANCER
 ==============================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -891,12 +922,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH AN AZURE APPLICATION GATEWAY
 ====================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -960,12 +993,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH A PUBLIC IP ADDRESS PER VM
 ==================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1030,12 +1065,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH BOOT DIAGNOSTICS
 ========================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1100,12 +1137,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET WITH A MARKETPLACE IMAGE PLAN
 ================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1169,12 +1208,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A SCALE SET FROM A CUSTOM IMAGE
 ======================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1230,12 +1271,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A PLATFORM-IMAGE SCALE SET WITH UNMANAGED OS DISKS
 =========================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1299,12 +1342,14 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
 
 
 
 CREATE A CUSTOM-IMAGE SCALE SET FROM AN UNMANAGED GENERALIZED OS IMAGE
 ======================================================================
 
+```
 PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS?api-version=2017-03-30
 
 {
@@ -1359,3 +1404,4 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+```
