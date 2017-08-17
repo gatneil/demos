@@ -1,3 +1,5 @@
+see responses [here](./RESPONSES.md)
+
 CREATE AN AVAILABILITY SET
 ==========================
 
