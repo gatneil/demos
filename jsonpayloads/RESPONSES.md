@@ -25,7 +25,7 @@ CREATE A VM WITH PASSWORD AUTHENTICATION
 ```
 {
   "properties": {
-    "vmId": "3f863a0f-2bdf-4b3d-849f-5d3c4acedd97",
+    "vmId": "b248db33-62ba-4d2d-b791-811e075ee0f5",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -74,7 +74,7 @@ CREATE A VM WITH SSH AUTHENTICATION
 ```
 {
   "properties": {
-    "vmId": "664e4895-23e9-4885-8a2b-c53b0a0c2a0a",
+    "vmId": "e0de9b84-a506-4b95-9623-00a425d05c90",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -130,7 +130,7 @@ CREATE A VM WITH PREMIUM STORAGE
 ```
 {
   "properties": {
-    "vmId": "0c57beaa-7d22-4be6-8763-13f580973f26",
+    "vmId": "a149cd25-409f-41af-8088-275f5486bc93",
     "hardwareProfile": {
       "vmSize": "Standard_DS1_v2"
     },
@@ -179,7 +179,7 @@ CREATE A VM IN AN AVAILABILITY SET
 ```
 {
   "properties": {
-    "vmId": "31952a75-53af-408d-aa56-cd73d6254143",
+    "vmId": "b7a098cc-b0b8-46e8-a205-62f301a62a8f",
     "availabilitySet": {
       "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/availabilitySets/NSGEXISTINGAS"
     },
@@ -231,7 +231,7 @@ CREATE A VM WITH BOOT DIAGNOSTICS
 ```
 {
   "properties": {
-    "vmId": "71e81de0-8178-4337-af0f-0b2e8297dfb2",
+    "vmId": "676420ba-7a24-4bfe-80bd-9c841ee184fa",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -286,7 +286,7 @@ CREATE A VM WITH EMPTY DATA DISKS
 ```
 {
   "properties": {
-    "vmId": "15f8d972-797e-469a-87a1-2c48258c5506",
+    "vmId": "3906fef9-a1e5-4b83-a8a8-540858b41df0",
     "hardwareProfile": {
       "vmSize": "Standard_D2_v2"
     },
@@ -354,7 +354,7 @@ CREATE A VM WITH A MARKETPLACE IMAGE PLAN
 ```
 {
   "properties": {
-    "vmId": "16c996cc-afb9-49ed-87b7-f46caea5bbda",
+    "vmId": "5c0d55a7-c407-4ed6-bf7d-ddb810267c85",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -408,7 +408,7 @@ CREATE A VM FROM A CUSTOM IMAGE
 ```
 {
   "properties": {
-    "vmId": "a884d816-5e04-453a-a7cc-85018a161e12",
+    "vmId": "71aa3d5a-d73d-4970-9182-8580433b2865",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -453,11 +453,66 @@ CREATE A PLATFORM-IMAGE VM WITH UNMANAGED OS AND DATA DISKS
 
 ```
 {
-  "error": {
-    "code": "InvalidParameter",
-    "target": "dataDisk.name",
-    "message": "The entity name 'dataDisk.name' is invalid according to its validation rule: ^[^_\\W][\\w-._]{0,79}(?<![-.])$."
-  }
+  "properties": {
+    "vmId": "5230a749-2f68-4830-900b-702182d32e63",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2_v2"
+    },
+    "storageProfile": {
+      "imageReference": {
+        "publisher": "MicrosoftWindowsServer",
+        "offer": "WindowsServer",
+        "sku": "2016-Datacenter",
+        "version": "latest"
+      },
+      "osDisk": {
+        "osType": "Windows",
+        "name": "myVMosdisk",
+        "createOption": "FromImage",
+        "vhd": {
+          "uri": "http://nsgexamplergdisks712.blob.core.windows.net/vhds/myDisk.vhd"
+        },
+        "caching": "ReadWrite"
+      },
+      "dataDisks": [
+        {
+          "lun": 0,
+          "name": "dataDisk0",
+          "createOption": "Empty",
+          "vhd": {
+            "uri": "http://nsgexamplergdisks712.blob.core.windows.net/vhds/myDisk0.vhd"
+          },
+          "caching": "None",
+          "diskSizeGB": 1023
+        },
+        {
+          "lun": 1,
+          "name": "dataDisk1",
+          "createOption": "Empty",
+          "vhd": {
+            "uri": "http://nsgexamplergdisks712.blob.core.windows.net/vhds/myDisk1.vhd"
+          },
+          "caching": "None",
+          "diskSizeGB": 1023
+        }
+      ]
+    },
+    "osProfile": {
+      "computerName": "myVM",
+      "adminUsername": "negat",
+      "windowsConfiguration": {
+        "provisionVMAgent": true,
+        "enableAutomaticUpdates": true
+      },
+      "secrets": []
+    },
+    "networkProfile": {"networkInterfaces":[{"id":"/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Network/networkInterfaces/nsgExistingNic","properties":{"primary":true}}]},
+    "provisioningState": "Creating"
+  },
+  "type": "Microsoft.Compute/virtualMachines",
+  "location": "westus",
+  "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/virtualMachines/myVM",
+  "name": "myVM"
 }
 ```
 
@@ -469,7 +524,7 @@ CREATE A CUSTOM-IMAGE VM FROM AN UNMANAGED GENERALIZED OS IMAGE
 ```
 {
   "properties": {
-    "vmId": "c77aeb7d-51c8-4d0e-94f1-1c2ae772ad14",
+    "vmId": "926cd555-a07c-4ff5-b214-4aa4dd09d79b",
     "hardwareProfile": {
       "vmSize": "Standard_D1_v2"
     },
@@ -553,7 +608,7 @@ CREATE A SCALE SET WITH PASSWORD AUTHENTICATION
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "6fbc265d-e46e-469b-bcbb-1d5687ef2155"
+    "uniqueId": "ffb27c5c-39a5-4d4e-b307-b32598689813"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -569,11 +624,58 @@ CREATE A SCALE SET WITH SSH AUTHENTICATION
 
 ```
 {
-  "error": {
-    "code": "InvalidParameter",
-    "target": "linuxConfiguration",
-    "message": "The value of parameter linuxConfiguration is invalid."
-  }
+  "sku": {
+    "name": "Standard_D1_v2",
+    "tier": "Standard",
+    "capacity": 3
+  },
+  "properties": {
+    "singlePlacementGroup": true,
+    "upgradePolicy": {
+      "mode": "Manual"
+    },
+    "virtualMachineProfile": {
+      "osProfile": {
+        "computerNamePrefix": "myVMSS",
+        "adminUsername": "negat",
+        "linuxConfiguration": {
+          "disablePasswordAuthentication": true,
+          "ssh": {
+            "publicKeys": [
+              {
+                "path": "/home/negat/.ssh/authorized_keys",
+                "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeClRAk2ipUs/l5voIsDC5q9RI+YSRd1Bvd/O+axgY4WiBzG+4FwJWZm/mLLe5DoOdHQwmU2FrKXZSW4w2sYE70KeWnrFViCOX5MTVvJgPE8ClugNl8RWth/tU849DvM9sT7vFgfVSHcAS2yDRyDlueii+8nF2ym8XWAPltFVCyLHRsyBp5YPqK8JFYIa1eybKsY3hEAxRCA+/7bq8et+Gj3coOsuRmrehav7rE6N12Pb80I6ofa6SM5XNYq4Xk0iYNx7R3kdz0Jj9XgZYWjAHjJmT0gTRoOnt6upOuxK7xI/ykWrllgpXrCPu3Ymz+c+ujaqcxDopnAl2lmf69/J1"
+              }
+            ]
+          }
+        },
+        "secrets": []
+      },
+      "storageProfile": {
+        "osDisk": {
+          "createOption": "FromImage",
+          "caching": "ReadWrite",
+          "managedDisk": {
+            "storageAccountType": "Standard_LRS"
+          }
+        },
+        "imageReference": {
+          "publisher": "Canonical",
+          "offer": "UbuntuServer",
+          "sku": "16.04-LTS",
+          "version": "latest"
+        }
+      },
+      "networkProfile": {"networkInterfaceConfigurations":[{"name":"myVMSS","properties":{"primary":true,"enableAcceleratedNetworking":false,"dnsSettings":{"dnsServers":[]},"ipConfigurations":[{"name":"myVMSS","properties":{"subnet":{"id":"/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Network/virtualNetworks/nsgExistingVnet/subnets/nsgExistingSubnet"},"privateIPAddressVersion":"IPv4"}}]}}]}
+    },
+    "provisioningState": "Creating",
+    "overprovision": true,
+    "uniqueId": "fb73af19-0090-467c-9ced-b00bceab1c45"
+  },
+  "type": "Microsoft.Compute/virtualMachineScaleSets",
+  "location": "westus",
+  "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS",
+  "name": "myVMSS"
 }
 ```
 
@@ -623,7 +725,7 @@ CREATE A SCALE SET WITH PREMIUM STORAGE
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "695df785-fda5-4f6a-9664-d2c99fbe2910"
+    "uniqueId": "19fd38a2-f50a-42c6-9dc7-3f9cf3791225"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -698,7 +800,7 @@ CREATE A SCALE SET WITH EMPTY DATA DISKS ON EACH VM
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "a445f704-640f-486c-ba67-d0b9ce07f521"
+    "uniqueId": "8042c376-4690-4c47-9fa2-fbdad70e32fa"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -753,7 +855,7 @@ CREATE A SCALE SET WITH AN AZURE LOAD BALANCER
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "dd6e269d-6a3d-4c68-8425-b144b3ea574c"
+    "uniqueId": "ec0b21ca-51ec-414b-9323-f236ffc21479"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -808,7 +910,7 @@ CREATE A SCALE SET WITH AN AZURE APPLICATION GATEWAY
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "a104203c-4bdc-4902-b28d-749011b1acad"
+    "uniqueId": "a0134477-b9d9-484b-b0e3-205c1c089ffa"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -838,12 +940,62 @@ CREATE A SCALE SET WITH BOOT DIAGNOSTICS
 
 ```
 {
-  "error": {
-    "code": "OperationNotAllowed",
-    "message": "Operation 'Update Virtual Machine Scale Set' is not allowed on Virtual Machine Scale Set 'myVMSS' since it is marked for deletion."
-  }
+  "sku": {
+    "name": "Standard_D1_v2",
+    "tier": "Standard",
+    "capacity": 3
+  },
+  "properties": {
+    "singlePlacementGroup": true,
+    "upgradePolicy": {
+      "mode": "Manual"
+    },
+    "virtualMachineProfile": {
+      "osProfile": {
+        "computerNamePrefix": "myVMSS",
+        "adminUsername": "negat",
+        "windowsConfiguration": {
+          "provisionVMAgent": true,
+          "enableAutomaticUpdates": true
+        },
+        "secrets": []
+      },
+      "storageProfile": {
+        "osDisk": {
+          "createOption": "FromImage",
+          "caching": "ReadWrite",
+          "managedDisk": {
+            "storageAccountType": "Standard_LRS"
+          }
+        },
+        "imageReference": {
+          "publisher": "MicrosoftWindowsServer",
+          "offer": "WindowsServer",
+          "sku": "2016-Datacenter",
+          "version": "latest"
+        }
+      },
+      "networkProfile": {"networkInterfaceConfigurations":[{"name":"myVMSS","properties":{"primary":true,"enableAcceleratedNetworking":false,"dnsSettings":{"dnsServers":[]},"ipConfigurations":[{"name":"myVMSS","properties":{"subnet":{"id":"/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Network/virtualNetworks/nsgExistingVnet/subnets/nsgExistingSubnet"},"privateIPAddressVersion":"IPv4"}}]}}]},
+      "diagnosticsProfile": {
+        "bootDiagnostics": {
+          "enabled": true,
+          "storageUri": "http://nsgdiagnostic.blob.core.windows.net"
+        }
+      }
+    },
+    "provisioningState": "Creating",
+    "overprovision": true,
+    "uniqueId": "d053ec5a-8da6-495f-ab13-38216503c6d7"
+  },
+  "type": "Microsoft.Compute/virtualMachineScaleSets",
+  "location": "westus",
+  "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS",
+  "name": "myVMSS"
 }
 ```
+
+
+
 
 
 
@@ -891,7 +1043,7 @@ CREATE A SCALE SET WITH A MARKETPLACE IMAGE PLAN
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "06f203c8-5f4b-4c3e-8c39-4561da38a780"
+    "uniqueId": "b9e23088-6ffc-46e0-9e02-b0a6eeef47db"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -948,7 +1100,7 @@ CREATE A SCALE SET FROM A CUSTOM IMAGE
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "34d15466-6722-451d-bfe7-3c5e9219addb"
+    "uniqueId": "afa2afa8-9e49-48fb-9d18-c86323b5d064"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -1004,7 +1156,7 @@ CREATE A PLATFORM-IMAGE SCALE SET WITH UNMANAGED OS DISKS
     },
     "provisioningState": "Creating",
     "overprovision": true,
-    "uniqueId": "186f19c1-cf7f-4da4-b1ef-f149a21dd213"
+    "uniqueId": "77b7df9a-32fe-45e3-8911-60ac9c9b9c64"
   },
   "type": "Microsoft.Compute/virtualMachineScaleSets",
   "location": "westus",
@@ -1012,7 +1164,6 @@ CREATE A PLATFORM-IMAGE SCALE SET WITH UNMANAGED OS DISKS
   "name": "myVMSS"
 }
 ```
-
 
 
 CREATE A CUSTOM-IMAGE SCALE SET FROM AN UNMANAGED GENERALIZED OS IMAGE
@@ -1063,6 +1214,3 @@ CREATE A CUSTOM-IMAGE SCALE SET FROM AN UNMANAGED GENERALIZED OS IMAGE
   "name": "myVMSS"
 }
 ```
-
-
-
