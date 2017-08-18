@@ -923,13 +923,53 @@ CREATE A SCALE SET WITH AN AZURE APPLICATION GATEWAY
 
 CREATE A SCALE SET WITH A PUBLIC IP ADDRESS PER VM
 ==================================================
-
 ```
 {
-  "error": {
-    "code": "OperationNotAllowed",
-    "message": "Operation 'Update Virtual Machine Scale Set' is not allowed on Virtual Machine Scale Set 'myVMSS' since it is marked for deletion."
-  }
+  "sku": {
+    "name": "Standard_D1_v2",
+    "tier": "Standard",
+    "capacity": 3
+  },
+  "properties": {
+    "singlePlacementGroup": true,
+    "upgradePolicy": {
+      "mode": "Manual"
+    },
+    "virtualMachineProfile": {
+      "osProfile": {
+        "computerNamePrefix": "myVMSS",
+        "adminUsername": "negat",
+        "windowsConfiguration": {
+          "provisionVMAgent": true,
+          "enableAutomaticUpdates": true
+        },
+        "secrets": []
+      },
+      "storageProfile": {
+        "osDisk": {
+          "createOption": "FromImage",
+          "caching": "ReadWrite",
+          "managedDisk": {
+            "storageAccountType": "Standard_LRS"
+          }
+        },
+        "imageReference": {
+          "publisher": "MicrosoftWindowsServer",
+          "offer": "WindowsServer",
+          "sku": "2016-Datacenter",
+          "version": "latest"
+        }
+      },
+      "networkProfile": {"networkInterfaceConfigurations":[{"name":"myVMSS","properties":{"primary":true,"enableAcceleratedNetworking":false,"dnsSettings":{"dnsServers":[]},"ipConfigurations":[{"name":"myVMSS","properties":{"publicIPAddressConfiguration":{"name":"pubip","properties":{"idleTimeoutInMinutes":15}},"subnet":{"id":"/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Network/virtualNetworks/nsgExistingVnet/subnets/nsgExistingSubnet"},"privateIPAddressVersion":"IPv4"}}]}}]}
+    },
+    "provisioningState": "Creating",
+    "overprovision": true,
+    "uniqueId": "da61d575-98ba-4959-8a02-a40d3bd96c15"
+  },
+  "type": "Microsoft.Compute/virtualMachineScaleSets",
+  "location": "westus",
+  "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/virtualMachineScaleSets/myVMSS",
+  "name": "myVMSS"
 }
 ```
 
