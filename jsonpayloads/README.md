@@ -1406,4 +1406,40 @@ PUT https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/
     }
   }
 }
+
+
+
+```
+GET COMPUTE OPERATIONS
+======================
+
+```
+GET https://management.azure.com/providers/Microsoft.Compute/operations?api-version=2017-03-30
+```
+
+
+
+LIST AVAILABILITY SETS IN A SUBSCRIPTION
+========================================
+
+```
+LOOPING GET https://management.azure.com/subscriptions/<subscription-id>/providers/Microsoft.Compute/availabilitySets?api-version=2017-03-30
+```
+
+
+
+LIST EXTENSIONS ON A VM
+=======================
+
+```
+GET https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/vmWithExt/extensions?api-version=2017-03-30
+```
+
+
+
+GET THE INSTANCE VIEW OF A VM
+=============================
+
+```
+GET https://management.azure.com/subscriptions/<subscription-id>/resourceGroups/nsgExampleRg/providers/Microsoft.Compute/virtualMachines/vmWithExt/InstanceView?api-version=2017-03-30
 ```
