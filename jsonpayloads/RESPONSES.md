@@ -1,6 +1,6 @@
 CREATE AN AVAILABILITY SET
 ==========================
-
+200
 ```
 {
   "properties": {
@@ -21,7 +21,7 @@ CREATE AN AVAILABILITY SET
 
 CREATE A VM WITH PASSWORD AUTHENTICATION
 ========================================
-
+201
 ```
 {
   "properties": {
@@ -70,7 +70,7 @@ CREATE A VM WITH PASSWORD AUTHENTICATION
 
 CREATE A VM WITH SSH AUTHENTICATION
 ===================================
-
+201
 ```
 {
   "properties": {
@@ -126,7 +126,7 @@ CREATE A VM WITH SSH AUTHENTICATION
 
 CREATE A VM WITH PREMIUM STORAGE
 ================================
-
+201
 ```
 {
   "properties": {
@@ -175,7 +175,7 @@ CREATE A VM WITH PREMIUM STORAGE
 
 CREATE A VM IN AN AVAILABILITY SET
 ==================================
-
+201
 ```
 {
   "properties": {
@@ -227,7 +227,7 @@ CREATE A VM IN AN AVAILABILITY SET
 
 CREATE A VM WITH BOOT DIAGNOSTICS
 =================================
-
+201
 ```
 {
   "properties": {
@@ -282,7 +282,7 @@ CREATE A VM WITH BOOT DIAGNOSTICS
 
 CREATE A VM WITH EMPTY DATA DISKS
 =================================
-
+201
 ```
 {
   "properties": {
@@ -350,7 +350,7 @@ CREATE A VM WITH EMPTY DATA DISKS
 
 CREATE A VM WITH A MARKETPLACE IMAGE PLAN
 =========================================
-
+201
 ```
 {
   "properties": {
@@ -404,7 +404,7 @@ CREATE A VM WITH A MARKETPLACE IMAGE PLAN
 
 CREATE A VM FROM A CUSTOM IMAGE
 ===============================
-
+201
 ```
 {
   "properties": {
@@ -450,7 +450,7 @@ CREATE A VM FROM A CUSTOM IMAGE
 
 CREATE A PLATFORM-IMAGE VM WITH UNMANAGED OS AND DATA DISKS
 ===========================================================
-
+201
 ```
 {
   "properties": {
@@ -520,7 +520,7 @@ CREATE A PLATFORM-IMAGE VM WITH UNMANAGED OS AND DATA DISKS
 
 CREATE A CUSTOM-IMAGE VM FROM AN UNMANAGED GENERALIZED OS IMAGE
 ===============================================================
-
+201
 ```
 {
   "properties": {
@@ -566,7 +566,7 @@ CREATE A CUSTOM-IMAGE VM FROM AN UNMANAGED GENERALIZED OS IMAGE
 
 CREATE A SCALE SET WITH PASSWORD AUTHENTICATION
 ===============================================
-
+201
 ```
 {
   "sku": {
@@ -621,7 +621,7 @@ CREATE A SCALE SET WITH PASSWORD AUTHENTICATION
 
 CREATE A SCALE SET WITH SSH AUTHENTICATION
 ==========================================
-
+201
 ```
 {
   "sku": {
@@ -683,7 +683,7 @@ CREATE A SCALE SET WITH SSH AUTHENTICATION
 
 CREATE A SCALE SET WITH PREMIUM STORAGE
 =======================================
-
+201
 ```
 {
   "sku": {
@@ -738,7 +738,7 @@ CREATE A SCALE SET WITH PREMIUM STORAGE
 
 CREATE A SCALE SET WITH EMPTY DATA DISKS ON EACH VM
 ===================================================
-
+201
 ```
 {
   "sku": {
@@ -813,7 +813,7 @@ CREATE A SCALE SET WITH EMPTY DATA DISKS ON EACH VM
 
 CREATE A SCALE SET WITH AN AZURE LOAD BALANCER
 ==============================================
-
+201
 ```
 {
   "sku": {
@@ -868,7 +868,7 @@ CREATE A SCALE SET WITH AN AZURE LOAD BALANCER
 
 CREATE A SCALE SET WITH AN AZURE APPLICATION GATEWAY
 ====================================================
-
+201
 ```
 {
   "sku": {
@@ -923,7 +923,7 @@ CREATE A SCALE SET WITH AN AZURE APPLICATION GATEWAY
 
 CREATE A SCALE SET WITH A PUBLIC IP ADDRESS PER VM
 ==================================================
-```
+```201
 {
   "sku": {
     "name": "Standard_D1_v2",
@@ -977,7 +977,7 @@ CREATE A SCALE SET WITH A PUBLIC IP ADDRESS PER VM
 
 CREATE A SCALE SET WITH BOOT DIAGNOSTICS
 ========================================
-
+201
 ```
 {
   "sku": {
@@ -1041,7 +1041,7 @@ CREATE A SCALE SET WITH BOOT DIAGNOSTICS
 
 CREATE A SCALE SET WITH A MARKETPLACE IMAGE PLAN
 ================================================
-
+201
 ```
 {
   "sku": {
@@ -1101,7 +1101,7 @@ CREATE A SCALE SET WITH A MARKETPLACE IMAGE PLAN
 
 CREATE A SCALE SET FROM A CUSTOM IMAGE
 ======================================
-
+201
 ```
 {
   "sku": {
@@ -1153,7 +1153,7 @@ CREATE A SCALE SET FROM A CUSTOM IMAGE
 
 CREATE A PLATFORM-IMAGE SCALE SET WITH UNMANAGED OS DISKS
 =========================================================
-
+201
 ```
 {
   "sku": {
@@ -1208,7 +1208,7 @@ CREATE A PLATFORM-IMAGE SCALE SET WITH UNMANAGED OS DISKS
 
 CREATE A CUSTOM-IMAGE SCALE SET FROM AN UNMANAGED GENERALIZED OS IMAGE
 ======================================================================
-
+201
 ```
 {
   "sku": {
