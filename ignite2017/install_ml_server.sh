@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get upgrade -y
+#apt-get upgrade -y
 apt-get install python-pip -y
 pip install --upgrade pip
 pip install flask
