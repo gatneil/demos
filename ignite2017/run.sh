@@ -4,22 +4,23 @@
 
 set -evx
 
-rgname="negat$RANDOM"
-location="eastus2"
+rgname="ignite$RANDOM"
+location="centralus"
+vmsku="Standard_F1"
 vmname="counter"
 vmssname="pushers"
-pubkeypath="/home/negat/.ssh/id_rsa.pub"
+#pubkeypath="/home/negat/.ssh/id_rsa.pub"
 uriBase="https://raw.githubusercontent.com/gatneil/scripts/master/"
 
-PATH="$PATH:/home/negat/lib/azure-cli/bin"
-
-if [ $1 ]
-then
-    uriBase="$1"
-fi
-
 az group create --name $rgname --location $location
-az vm create --resource-group $rgname --name $vmname --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username azureuser --ssh-key-value $pubkeypath --nsg ""
+
+az vmss create --resource-group $rgname --name $vmssname --image UbuntuLTS --instance-count 10
+
+az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vmss-name $vmssname --settings "{\"fileUris\": [\"https://raw.githubusercontent.com/gatneil/demos/ignite2017/ignite2017/install_ml_server.sh\"], \"commandToExecute\": \"bash install_ml_server.sh ${pip}\"}"
+
+exit 0
+
+az vm create --resource-group $rgname --name $vmname --image UbuntuLTS --admin-username negat --nsg "" --size $vmsku
 
 az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vm-name $vmname --settings "{\"fileUris\": [\"${uriBase}install_count_requests.sh\"], \"commandToExecute\": \"bash install_count_requests.sh ${uriBase}\"}"
 
@@ -28,6 +29,4 @@ pip=`az network public-ip show --resource-group $rgname --name "$vmname"PublicIP
 echo $pip
 
 
-az vmss create --resource-group $rgname --name $vmssname --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username azureuser --ssh-key-value $pubkeypath --upgrade-policy-mode Automatic --instance-count 10 --subnet-address-prefix '10.0.0.0/21' --app-gateway myappgw --app-gateway-subnet-address-prefix '10.0.255.0/24' --debug
 
-az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vmss-name $vmssname --settings "{\"fileUris\": [\"${uriBase}checkin.sh\"], \"commandToExecute\": \"bash checkin.sh ${pip}\"}"
