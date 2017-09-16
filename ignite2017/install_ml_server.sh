@@ -5,7 +5,7 @@ set -evx
 apt-get update
 apt-get install python-pip -y
 pip install --upgrade pip
-pip install flask sumy
+pip install flask numpy sumy
 
 python -c "import nltk; nltk.download('punkt')"
 
