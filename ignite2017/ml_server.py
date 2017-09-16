@@ -1,13 +1,14 @@
 from flask import Flask
+from flask import request
 app = Flask(__name__)
 
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def ml_server():
-        parser = PlaintextParser.from_string("Hi there! My name is Neil. Things are cool.", Tokenizer("english"))
+        parser = PlaintextParser.from_string(request.form['text'], Tokenizer("english"))
         summarizer = LexRankSummarizer()
 
         summary = summarizer(parser.document, 2)
