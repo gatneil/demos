@@ -5,7 +5,9 @@ set -evx
 apt-get update
 apt-get install python-pip -y
 pip install --upgrade pip
-pip install flask
+pip install flask sumy
+
+python -c "import nltk; nltk.download('punkt')"
 
 curl -o ml_server.py https://raw.githubusercontent.com/gatneil/demos/ignite2017/ignite2017/ml_server.py
 
