@@ -13,6 +13,6 @@ def ml_server():
         summary = summarizer(parser.document, 2)
         res = ""
         for sentence in summary:
-                res += sentence
+                res += str(sentence)
             
         return res
