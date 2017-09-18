@@ -6,7 +6,11 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
+def default_page():
+        return "Hello Ignite!"
+
+@app.route('/summarize', methods=['POST'])
 def ml_server():
         parser = PlaintextParser.from_string(request.form['text'], Tokenizer("english"))
         summarizer = LexRankSummarizer()
