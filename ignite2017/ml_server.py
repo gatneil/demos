@@ -15,7 +15,7 @@ def ml_server():
         parser = PlaintextParser.from_string(request.form['text'], Tokenizer("english"))
         summarizer = LexRankSummarizer()
 
-        summary = summarizer(parser.document, 2)
+        summary = summarizer(parser.document, 1)
         res = ""
         for sentence in summary:
                 res += str(sentence)
