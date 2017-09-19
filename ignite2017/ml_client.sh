@@ -8,6 +8,8 @@ while true;
 do
     while read -r line;
     do
-	curl ${1}/summarize -F text="$line"
+	curl ${1}/summarize -F text="$line" &
     done < emerson.txt
+
+    sleep 2
 done
