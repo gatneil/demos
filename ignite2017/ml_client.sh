@@ -11,5 +11,5 @@ do
 	curl ${1}/summarize -F text="$line" &
     done < emerson.txt
 
-    sleep 2
+    sleep 0.1
 done
