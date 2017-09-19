@@ -24,6 +24,6 @@ az vm create --resource-group $rgname --name $vmname --image UbuntuLTS --nsg "" 
 
 vmpip=`az network public-ip show --resource-group $rgname --name ${vmname}PublicIP | grep  \"ipAddress\" | cut -d "\"" -f 4`
 
-az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vm-name $vmname --settings "{\"fileUris\": [\"https://raw.githubusercontent.com/gatneil/demos/ignite2017/ignite2017/ml_client.sh\"], \"commandToExecute\": \"bash ml_client.sh ${vmsspip}\"; done &\"}"
+az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group $rgname --vm-name $vmname --settings "{\"fileUris\": [\"https://raw.githubusercontent.com/gatneil/demos/ignite2017/ignite2017/ml_client.sh\"], \"commandToExecute\": \"bash ml_client.sh ${vmsspip}\"}"
 
 ssh -o StrictHostKeyChecking=no ${vmpip} sudo tail -f /var/lib/waagent/custom-script/download/0/stdout
