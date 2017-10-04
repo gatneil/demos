@@ -1,6 +1,6 @@
 [Unit]
 Description="Run my app code on start/stop"
-Requires=network-online.target
+After=network.target
 
 [Service]
 ExecStart=/bin/bash /onstart.sh
