@@ -1,0 +1,1 @@
+while ($true) { Invoke-RestMethod $args[0]/stopping; sleep 5 }
