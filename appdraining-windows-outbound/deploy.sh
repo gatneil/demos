@@ -29,7 +29,7 @@ az vm extension set --publisher "Microsoft.Compute" --name "CustomScriptExtensio
 sleep 30
 
 # delete the VM
-#az vm delete --resource-group ${RGNAME} --name ${VM2NAME} --yes
+az vm delete --resource-group ${RGNAME} --name ${VM2NAME} --yes
 
 # check the webserver logs to see the results
 cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP}
