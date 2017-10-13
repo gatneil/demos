@@ -23,7 +23,7 @@ az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScrip
 
 # create a VM to be deleted that will make outbound connections to the other VM
 az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image MicrosoftWindowsServer:WindowsServer:2016-Datacenter:latest --authentication-type password --admin-username ${USERNAME} --admin-password $PASSWORD --nsg "" --size Standard_DS2_v2 --storage-sku Premium_LRS --vnet-name ${VNET2NAME}
-az vm extension set --publisher "Microsoft.Compute" --name "CustomScriptExtension" --resource-group ${RGNAME} --vm-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/install.ps1\"], \"commandToExecute\": \"powershell -ExecutionPolicy Unrestricted -File install.ps1 http://${PIP}:5000\"}"
+az vm extension set --publisher "Microsoft.Compute" --name "CustomScriptExtension" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/install.ps1\"], \"commandToExecute\": \"powershell -ExecutionPolicy Unrestricted -File install.ps1 http://${PIP}:5000\"}"
 
 # wait a bit
 sleep 30
