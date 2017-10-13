@@ -12,11 +12,11 @@ mkdir C:\Windows\System32\GroupPolicy\Machine\Scripts\Startup
 mkdir C:\Windows\System32\GroupPolicy\User
 
 "[Shutdown]" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
-"0CmdLine=C:\onstop.ps1 $args" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
-"0Parameters=" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
+"0CmdLine=C:\onstop.ps1" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
+"0Parameters=$args" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
 "[Startup]" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
-"0CmdLine=C:\onstart.ps1 $args" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
-"0Parameters=" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
+"0CmdLine=C:\onstart.ps1" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
+"0Parameters=$args" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\psscripts.ini
 
 "" >> C:\Windows\System32\GroupPolicy\Machine\Scripts\scripts.ini
 
