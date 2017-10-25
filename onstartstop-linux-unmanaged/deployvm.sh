@@ -26,6 +26,6 @@ sleep 30
 az vm delete --resource-group ${RGNAME} --name ${VMNAME} --yes
 
 # create a new VM and attach the data disk from the previous VM to see the results
-PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" | grep publicIpAddress | cut -d '"' -f 4 --use-unmanaged-disk)
+PIP=$(az vm create --resource-group ${RGNAME} --name ${VM2NAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --nsg "" --use-unmanaged-disk | grep publicIpAddress | cut -d '"' -f 4)
 az vm unmanaged-disk attach --resource-group ${RGNAME} --vm-name ${VM2NAME} --name ${DISKNAME}
 cat check.sh | ssh -o "StrictHostKeyChecking no" ${USERNAME}@${PIP}
