@@ -44,8 +44,9 @@
 	    "location": "[resourceGroup().location]",
 	    "apiVersion": "2017-08-01",
 	    "properties": {
-		"publicIPAllocationMethod": "Dynamic"
-	    }
+		"publicIPAllocationMethod": "Static"
+	    },
+	    "sku": {"name": "Standard"}
 	},
 	{
 	    "apiVersion": "[variables('networkApiVersion')]",
@@ -76,6 +77,7 @@
 	    "dependsOn": [
 		"[concat('Microsoft.Network/publicIPAddresses/', variables('pipName'))]"
 	    ],
+	    "sku": {"name": "Standard"},
 	    "properties": {
 		"frontendIPConfigurations": [
 		    {
@@ -150,6 +152,7 @@
 		"[resourceId('Microsoft.Network/loadBalancers/', variables('lbName'))]",
 		"[resourceId('Microsoft.Network/virtualNetworks/', variables('newVNETName'))]"
 	    ],
+	    "zones": ["1", "2", "3"],
 	    "sku": {
 		"name": "Standard_D1_v2",
 		"tier": "Standard",
