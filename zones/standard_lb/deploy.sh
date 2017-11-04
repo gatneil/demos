@@ -17,7 +17,7 @@ az group create -l ${LOCATION} -n ${RGNAME}
 az network public-ip create -n ${PIPNAME} -g ${RGNAME} --sku Standard
 az network lb create -n ${LBNAME} -g ${RGNAME} --public-ip-address ${PIPNAME} --sku Standard
 az vmss create -n ${VMSSNAME} -g ${RGNAME} --instance-count ${IC} --image ${IMAGE} --load-balancer ${LBNAME} --zones ${VMSSZONES} --single-placement-group true --upgrade-policy-mode Automatic
-az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vm-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/installserver.sh\"], \"commandToExecute\": \"bash installserver.sh ${URLBASE}\"}"
+az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vmss-name ${VM2NAME} --settings "{\"fileUris\": [\"${URLBASE}/installserver.sh\"], \"commandToExecute\": \"bash installserver.sh ${URLBASE}\"}"
 
 
 # create VM to be deleted; install onstart and onstop code; also put behind LB
