@@ -20,7 +20,7 @@ def hello_world():
 @app.route('/checkin/<vmname>')
 def checkin(vmname):
     # show the user profile for that user
-    fname = calendar.timegm(time.gmtime()) + '_' + vmname + '_checkin.txt'
+    fname = str(calendar.timegm(time.gmtime())) + '_' + vmname + '_checkin.txt'
     with open(fname, 'w') as f:
         f.write("checking in!")
         
