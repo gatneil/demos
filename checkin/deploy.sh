@@ -2,7 +2,7 @@
 
 set -evx
 
-RGNAME=onss$RANDOM
+RGNAME=checkin$RANDOM
 VMNAME=${RGNAME}
 VMSSNAME=${VMNAME}2
 DISKNAME=${RGNAME}
@@ -19,5 +19,5 @@ az vm extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScrip
 
 
 # create a VMSS that will contact the listener to checkin
-az vmss create --resource-group ${RGNAME} --name ${VMSSNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH
-az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vmss-name ${VMNAME} --settings "{\"fileUris\": [\"${URLBASE}/checkin.sh\"], \"commandToExecute\": \"bash checkin.sh ${PIP}\"}"
+az vmss create --resource-group ${RGNAME} --name ${VMSSNAME} --image Canonical:UbuntuServer:16.04-LTS:latest --admin-username ${USERNAME} --ssh-key-value $PUBKEYPATH --upgrade-policy-mode Automatic
+az vmss extension set --publisher "Microsoft.Azure.Extensions" --name "CustomScript" --resource-group ${RGNAME} --vmss-name ${VMSSNAME} --settings "{\"fileUris\": [\"${URLBASE}/checkin.sh\"], \"commandToExecute\": \"bash checkin.sh ${PIP}\"}"
