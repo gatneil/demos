@@ -2,9 +2,9 @@
 
 set -evx
 
-RGNAME=enablement$RANDOM
-VMNAME=${RGNAME}
-PASS="${RGNAME}aA!"
+RGNAME="neil_guestos_rg(-_-)hi_meagan"
+VMNAME="enablement$RANDOM"
+PASS="${VMNAME}aA!"
 LOCATION=westus
 URLBASE="https://raw.githubusercontent.com/gatneil/demos/enablement/enablement/enable.ps1"
 

@@ -1,0 +1,2310 @@
+[
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/0",
+    "instanceId": "0",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000000",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_0_OsDisk_1_bc58323e01d74d37b4a80aefce4d9db6",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-16T22:03:02.989502+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 0,
+      "platformUpdateDomain": 0,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-16T22:04:20.324392+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:51+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_0",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/0/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000000",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_0_OsDisk_1_bc58323e01d74d37b4a80aefce4d9db6",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_0_OsDisk_1_bc58323e01d74d37b4a80aefce4d9db6",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "7aa0bd7f-06f6-4076-a3c7-a611e33892cc"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/1",
+    "instanceId": "1",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000001",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_1_OsDisk_1_b0ec1ad3de5f4f1eba17b2ce6aa2cc45",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-16T22:03:02.989502+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 1,
+      "platformUpdateDomain": 1,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-16T22:04:20.324392+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:52+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_1",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/1/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000001",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_1_OsDisk_1_b0ec1ad3de5f4f1eba17b2ce6aa2cc45",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_1_OsDisk_1_b0ec1ad3de5f4f1eba17b2ce6aa2cc45",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "ce7602a3-40e3-455e-a396-8a2f0a6c5812"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/2",
+    "instanceId": "2",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000002",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_2_OsDisk_1_46d933e1a17a4f8b9072faf5f39bddeb",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-16T22:01:52.299629+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 2,
+      "platformUpdateDomain": 2,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-16T22:03:01.301972+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:53+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_2",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/2/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000002",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_2_OsDisk_1_46d933e1a17a4f8b9072faf5f39bddeb",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_2_OsDisk_1_46d933e1a17a4f8b9072faf5f39bddeb",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "d125b95e-0cc5-487d-b29c-93836efd4ec8"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/4",
+    "instanceId": "4",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000004",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_4_OsDisk_1_9c4b78bff3134985a9ed8eb9bd42a25e",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-16T22:01:52.299629+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 4,
+      "platformUpdateDomain": 4,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-16T22:03:02.317597+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:50+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_4",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/4/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000004",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_4_OsDisk_1_9c4b78bff3134985a9ed8eb9bd42a25e",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_4_OsDisk_1_9c4b78bff3134985a9ed8eb9bd42a25e",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "436a2cff-2e21-470a-b299-363a4196d840"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/6",
+    "instanceId": "6",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000006",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_6_OsDisk_1_7643339086384dc4bbb1bad417626c72",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-16T22:01:52.299629+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 1,
+      "platformUpdateDomain": 2,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-16T22:03:02.317597+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:52+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_6",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/6/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000006",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_6_OsDisk_1_7643339086384dc4bbb1bad417626c72",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_6_OsDisk_1_7643339086384dc4bbb1bad417626c72",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "2ca38468-a509-4a0f-b50d-91eeb5414099"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/8",
+    "instanceId": "8",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000008",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_8_OsDisk_1_07ddebe31b73486691f2befdb9c823f1",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:19:57.436584+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 0,
+      "platformUpdateDomain": 1,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:21:18.002692+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:51+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_8",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/8/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000008",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_8_OsDisk_1_07ddebe31b73486691f2befdb9c823f1",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_8_OsDisk_1_07ddebe31b73486691f2befdb9c823f1",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "d50c6433-eb5d-454e-9f1b-f7ba52efd7f6"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/9",
+    "instanceId": "9",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf2000009",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_9_OsDisk_1_edde42e9a7fd46b6a1a74d32809e3e25",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:19:57.436584+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 2,
+      "platformUpdateDomain": 3,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:21:18.002692+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:53+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_9",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/9/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf2000009",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_9_OsDisk_1_edde42e9a7fd46b6a1a74d32809e3e25",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_9_OsDisk_1_edde42e9a7fd46b6a1a74d32809e3e25",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "177fe4fb-b867-4506-b321-87c1e72715e5"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/10",
+    "instanceId": "10",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000A",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_10_OsDisk_1_171eb4068aa34cb79bc1ae3b87e8bcd2",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 3,
+      "platformUpdateDomain": 4,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:56.827167+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:52+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_10",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/10/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000A",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_10_OsDisk_1_171eb4068aa34cb79bc1ae3b87e8bcd2",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_10_OsDisk_1_171eb4068aa34cb79bc1ae3b87e8bcd2",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "797caba0-98d0-47ac-a146-4f17d5e34e32"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/11",
+    "instanceId": "11",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000B",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_11_OsDisk_1_45a67715ea9a4e4c9364bb09d5130c16",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 4,
+      "platformUpdateDomain": 0,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:51.858173+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:53+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_11",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/11/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000B",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_11_OsDisk_1_45a67715ea9a4e4c9364bb09d5130c16",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_11_OsDisk_1_45a67715ea9a4e4c9364bb09d5130c16",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "9c43f80d-90be-467c-a864-5bb6095e33bd"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/12",
+    "instanceId": "12",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000C",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_12_OsDisk_1_370283c28ae24c60b2651a251b01bbfb",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 0,
+      "platformUpdateDomain": 2,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:53.811418+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:53+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_12",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/12/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000C",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_12_OsDisk_1_370283c28ae24c60b2651a251b01bbfb",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_12_OsDisk_1_370283c28ae24c60b2651a251b01bbfb",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "1b545d06-8f21-4a96-bfc7-776704123d50"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/13",
+    "instanceId": "13",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000D",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_13_OsDisk_1_051e3d4cb80c46e68efd29966a6da6ba",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 1,
+      "platformUpdateDomain": 3,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:54.842735+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:53+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_13",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/13/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000D",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_13_OsDisk_1_051e3d4cb80c46e68efd29966a6da6ba",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_13_OsDisk_1_051e3d4cb80c46e68efd29966a6da6ba",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "f9f6caa9-fc68-4af0-99f7-35ef7acb41a8"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/14",
+    "instanceId": "14",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000E",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_14_OsDisk_1_857942f12b154fc9b7006881da6e21f8",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 2,
+      "platformUpdateDomain": 4,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:56.842796+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:52+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_14",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/14/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000E",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_14_OsDisk_1_857942f12b154fc9b7006881da6e21f8",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_14_OsDisk_1_857942f12b154fc9b7006881da6e21f8",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "143d9fe1-f538-4205-af45-235ab713055a"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/15",
+    "instanceId": "15",
+    "instanceView": {
+      "additionalProperties": {
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_15_OsDisk_1_d6801bbcf7a141e39446ee53ef649d51",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 3,
+      "platformUpdateDomain": 0,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:54.842735+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": null
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_15",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/15/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000F",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_15_OsDisk_1_d6801bbcf7a141e39446ee53ef649d51",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_15_OsDisk_1_d6801bbcf7a141e39446ee53ef649d51",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "362fdb96-1b9c-4349-9446-98a05b3a8b48"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/16",
+    "instanceId": "16",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000G",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_16_OsDisk_1_a3c8436c85cc4e1598a3d620c0eb8cf9",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 4,
+      "platformUpdateDomain": 1,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:55.842748+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:51+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_16",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/16/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000G",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_16_OsDisk_1_a3c8436c85cc4e1598a3d620c0eb8cf9",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_16_OsDisk_1_a3c8436c85cc4e1598a3d620c0eb8cf9",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "42bcc5d6-749a-4eaa-b200-e5d0a1802173"
+  },
+  {
+    "additionalProperties": {},
+    "availabilitySet": null,
+    "diagnosticsProfile": null,
+    "hardwareProfile": {
+      "additionalProperties": {},
+      "vmSize": null
+    },
+    "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/NSGPM/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/18",
+    "instanceId": "18",
+    "instanceView": {
+      "additionalProperties": {
+        "computerName": "nsgpmutf200000I",
+        "osName": "ubuntu",
+        "osVersion": "16.04",
+        "placementGroupId": "a2f9cbc4-f7c2-49ce-bb6e-b7c3c560e94f"
+      },
+      "bootDiagnostics": null,
+      "disks": [
+        {
+          "additionalProperties": {},
+          "encryptionSettings": null,
+          "name": "nsgpm_nsgpm_18_OsDisk_1_abecc73adb9748e78c3f2856a997c2df",
+          "statuses": [
+            {
+              "additionalProperties": {},
+              "code": "ProvisioningState/succeeded",
+              "displayStatus": "Provisioning succeeded",
+              "level": "Info",
+              "message": null,
+              "time": "2018-05-17T17:18:43.412704+00:00"
+            }
+          ]
+        }
+      ],
+      "extensions": null,
+      "maintenanceRedeployStatus": {
+        "additionalProperties": {},
+        "isCustomerInitiatedMaintenanceAllowed": true,
+        "lastOperationMessage": null,
+        "lastOperationResultCode": "None",
+        "maintenanceWindowEndTime": "2018-06-11T04:30:00+00:00",
+        "maintenanceWindowStartTime": "2018-06-04T04:30:00+00:00",
+        "preMaintenanceWindowEndTime": "2018-06-01T00:30:00+00:00",
+        "preMaintenanceWindowStartTime": "2018-05-21T00:30:00+00:00"
+      },
+      "platformFaultDomain": 1,
+      "platformUpdateDomain": 4,
+      "rdpThumbPrint": null,
+      "statuses": [
+        {
+          "additionalProperties": {},
+          "code": "ProvisioningState/succeeded",
+          "displayStatus": "Provisioning succeeded",
+          "level": "Info",
+          "message": null,
+          "time": "2018-05-17T17:19:55.827122+00:00"
+        },
+        {
+          "additionalProperties": {},
+          "code": "PowerState/running",
+          "displayStatus": "VM running",
+          "level": "Info",
+          "message": null,
+          "time": null
+        }
+      ],
+      "vmAgent": {
+        "additionalProperties": {},
+        "extensionHandlers": [],
+        "statuses": [
+          {
+            "additionalProperties": {},
+            "code": "ProvisioningState/succeeded",
+            "displayStatus": "Ready",
+            "level": "Info",
+            "message": "Guest Agent is running",
+            "time": "2018-05-21T22:08:51+00:00"
+          }
+        ],
+        "vmAgentVersion": "2.2.25"
+      }
+    },
+    "latestModelApplied": true,
+    "licenseType": null,
+    "location": "westus",
+    "name": "nsgpm_18",
+    "networkProfile": {
+      "additionalProperties": {},
+      "networkInterfaces": [
+        {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/virtualMachineScaleSets/nsgpm/virtualMachines/18/networkInterfaces/nsgpmNic",
+          "primary": null,
+          "resourceGroup": "nsgpm"
+        }
+      ]
+    },
+    "osProfile": {
+      "additionalProperties": {},
+      "adminPassword": null,
+      "adminUsername": "negat",
+      "computerName": "nsgpmutf200000I",
+      "customData": null,
+      "linuxConfiguration": {
+        "additionalProperties": {},
+        "disablePasswordAuthentication": false,
+        "ssh": null
+      },
+      "secrets": [],
+      "windowsConfiguration": null
+    },
+    "plan": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "NSGPM",
+    "resources": null,
+    "sku": {
+      "additionalProperties": {},
+      "capacity": null,
+      "name": "Standard_D1_v2",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "additionalProperties": {},
+      "dataDisks": [],
+      "imageReference": {
+        "additionalProperties": {},
+        "id": null,
+        "offer": "UbuntuServer",
+        "publisher": "Canonical",
+        "sku": "16.04-LTS",
+        "version": "16.04.201805090"
+      },
+      "osDisk": {
+        "additionalProperties": {},
+        "caching": "ReadWrite",
+        "createOption": "FromImage",
+        "diskSizeGb": 30,
+        "encryptionSettings": null,
+        "image": null,
+        "managedDisk": {
+          "additionalProperties": {},
+          "id": "/subscriptions/5a810961-5236-4bbd-b50a-bda258eb00c0/resourceGroups/nsgpm/providers/Microsoft.Compute/disks/nsgpm_nsgpm_18_OsDisk_1_abecc73adb9748e78c3f2856a997c2df",
+          "resourceGroup": "nsgpm",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "nsgpm_nsgpm_18_OsDisk_1_abecc73adb9748e78c3f2856a997c2df",
+        "osType": "Linux",
+        "vhd": null
+      }
+    },
+    "tags": null,
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "cb2e618f-12f0-4e83-84e8-0bfbd01286a3"
+  }
+]
