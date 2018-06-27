@@ -11,7 +11,7 @@
 	"size": {
 	    "type": "string",
 	    "allowedValues": ["Small", "Large"]
-	},
+	}
     },
     "variables": {
 	"vmSizeSmall": "Standard_D1",
